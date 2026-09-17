@@ -1,0 +1,501 @@
+fileFormatVersion: 2
+guid: ee9f7c1af30e34b409498afe47f74b12
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1227448308129481677
+    second: ConvertionRune_Roxa#O-Sheet_0
+  - first:
+      213: -930600837887235593
+    second: ConvertionRune_Roxa#O-Sheet_1
+  - first:
+      213: 2200826962255830087
+    second: ConvertionRune_Roxa#O-Sheet_2
+  - first:
+      213: -4330988555266643376
+    second: ConvertionRune_Roxa#O-Sheet_3
+  - first:
+      213: -8937673796677740136
+    second: ConvertionRune_Roxa#O-Sheet_4
+  - first:
+      213: -5986688457669500129
+    second: ConvertionRune_Roxa#O-Sheet_5
+  - first:
+      213: -1489417715057448656
+    second: ConvertionRune_Roxa#O-Sheet_6
+  - first:
+      213: 9179484958167290860
+    second: ConvertionRune_Roxa#O-Sheet_7
+  - first:
+      213: -7711869807462396953
+    second: ConvertionRune_Roxa#O-Sheet_8
+  - first:
+      213: 8101124394885993171
+    second: ConvertionRune_Roxa#O-Sheet_9
+  - first:
+      213: -3535498421850011228
+    second: ConvertionRune_Roxa#O-Sheet_10
+  - first:
+      213: -3450081126130800272
+    second: ConvertionRune_Roxa#O-Sheet_11
+  - first:
+      213: -8886008166210440159
+    second: ConvertionRune_Roxa#O-Sheet_12
+  - first:
+      213: 8341917710346411116
+    second: ConvertionRune_Roxa#O-Sheet_13
+  - first:
+      213: -460739520284167769
+    second: ConvertionRune_Roxa#O-Sheet_14
+  - first:
+      213: 5863180929809742037
+    second: ConvertionRune_Roxa#O-Sheet_15
+  - first:
+      213: 4431678823063799393
+    second: ConvertionRune_Roxa#O-Sheet_16
+  - first:
+      213: -2098851133297338734
+    second: ConvertionRune_Roxa#O-Sheet_17
+  - first:
+      213: 7136198613705372458
+    second: ConvertionRune_Roxa#O-Sheet_18
+  - first:
+      213: -2907647194923511976
+    second: ConvertionRune_Roxa#O-Sheet_19
+  - first:
+      213: -858266921433047892
+    second: ConvertionRune_Roxa#O-Sheet_20
+  - first:
+      213: 6510131408707940254
+    second: ConvertionRune_Roxa#O-Sheet_21
+  - first:
+      213: -8155582223230292265
+    second: ConvertionRune_Roxa#O-Sheet_22
+  - first:
+      213: -4509405047265894943
+    second: ConvertionRune_Roxa#O-Sheet_23
+  - first:
+      213: -1465746747581124225
+    second: ConvertionRune_Roxa#O-Sheet_24
+  - first:
+      213: -6972707525894780471
+    second: ConvertionRune_Roxa#O-Sheet_25
+  - first:
+      213: 4076019434196692534
+    second: ConvertionRune_Roxa#O-Sheet_26
+  - first:
+      213: -4555158790649851841
+    second: ConvertionRune_Roxa#O-Sheet_27
+  - first:
+      213: 524845232255827542
+    second: ConvertionRune_Roxa#O-Sheet_28
+  - first:
+      213: 6716183952802262129
+    second: ConvertionRune_Roxa#O-Sheet_29
+  - first:
+      213: 5921809750232259000
+    second: ConvertionRune_Roxa#O-Sheet_30
+  - first:
+      213: 4045227712898520284
+    second: ConvertionRune_Roxa#O-Sheet_31
+  - first:
+      213: -7512506077519434522
+    second: ConvertionRune_Roxa#O-Sheet_32
+  - first:
+      213: 3307614987128905789
+    second: ConvertionRune_Roxa#O-Sheet_33
+  - first:
+      213: 3197250001275160772
+    second: ConvertionRune_Roxa#O-Sheet_34
+  - first:
+      213: 3438723921357871464
+    second: ConvertionRune_Roxa#O-Sheet_35
+  - first:
+      213: 255276933118376025
+    second: ConvertionRune_Roxa#O-Sheet_36
+  - first:
+      213: -788652943246620461
+    second: ConvertionRune_Roxa#O-Sheet_37
+  - first:
+      213: -2088227620119068652
+    second: ConvertionRune_Roxa#O-Sheet_38
+  - first:
+      213: 4672684634671428153
+    second: ConvertionRune_Roxa#O-Sheet_39
+  - first:
+      213: 8228147799982361224
+    second: ConvertionRune_Roxa#O-Sheet_40
+  - first:
+      213: -3289770318760573175
+    second: ConvertionRune_Roxa#O-Sheet_41
+  - first:
+      213: -1466026589657823633
+    second: ConvertionRune_Roxa#O-Sheet_42
+  - first:
+      213: -883562648373027063
+    second: ConvertionRune_Roxa#O-Sheet_43
+  - first:
+      213: -3939714364043041865
+    second: ConvertionRune_Roxa#O-Sheet_44
+  - first:
+      213: 6906221745638368693
+    second: ConvertionRune_Roxa#O-Sheet_45
+  - first:
+      213: -5411665405776315947
+    second: ConvertionRune_Roxa#O-Sheet_46
+  - first:
+      213: -448569503626185979
+    second: ConvertionRune_Roxa#O-Sheet_47
+  - first:
+      213: 3035997608613793694
+    second: ConvertionRune_Roxa#O-Sheet_48
+  - first:
+      213: -7368455887777583773
+    second: ConvertionRune_Roxa#O-Sheet_49
+  - first:
+      213: 5101998104878097271
+    second: ConvertionRune_Roxa#O-Sheet_50
+  - first:
+      213: -5447396008110184870
+    second: ConvertionRune_Roxa#O-Sheet_51
+  - first:
+      213: -956670152437433119
+    second: ConvertionRune_Roxa#O-Sheet_52
+  - first:
+      213: 7735309784890254535
+    second: ConvertionRune_Roxa#O-Sheet_53
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ConvertionRune_Roxa#O-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33cb9cd544a37fee0800000000000000
+      internalID: -1227448308129481677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_Roxa#O-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f9ec0ee777d513f0800000000000000
+      internalID: -930600837887235593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_Roxa#O-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74c5c513678ea8e10800000000000000
+      internalID: 2200826962255830087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_Roxa#O-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05aac050bdc35e3c0800000000000000
+      internalID: -4330988555266643376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_Roxa#O-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 899d4b6290107f380800000000000000
+      internalID: -8937673796677740136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_Roxa#O-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f13adab01920beca0800000000000000
+      internalID: -5986688457669500129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_Roxa#O-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 039a3dbba76845be0800000000000000
+      internalID: -1489417715057448656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_Roxa#O-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce35a983fe4146f70800000000000000
+      internalID: 9179484958167290860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_Roxa#O-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ebc424f44fe9f490800000000000000
+      internalID: -7711869807462396953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0bed81304e89cd042bacc243c523b5d5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":135.0,"y":192.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      ConvertionRune_Roxa#O-Sheet_0: -1227448308129481677
+      ConvertionRune_Roxa#O-Sheet_1: -930600837887235593
+      ConvertionRune_Roxa#O-Sheet_2: 2200826962255830087
+      ConvertionRune_Roxa#O-Sheet_3: -4330988555266643376
+      ConvertionRune_Roxa#O-Sheet_4: -8937673796677740136
+      ConvertionRune_Roxa#O-Sheet_5: -5986688457669500129
+      ConvertionRune_Roxa#O-Sheet_6: -1489417715057448656
+      ConvertionRune_Roxa#O-Sheet_7: 9179484958167290860
+      ConvertionRune_Roxa#O-Sheet_8: -7711869807462396953
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,477 @@
+fileFormatVersion: 2
+guid: 56f359aa8bd66c042a85dda4c2a07b78
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5935794063665210618
+    second: ConvertionRune_Azul1-Sheet_0
+  - first:
+      213: -9138217983026929469
+    second: ConvertionRune_Azul1-Sheet_1
+  - first:
+      213: -22407708452480472
+    second: ConvertionRune_Azul1-Sheet_2
+  - first:
+      213: 6907925828340770288
+    second: ConvertionRune_Azul1-Sheet_3
+  - first:
+      213: -4902487127691078319
+    second: ConvertionRune_Azul1-Sheet_4
+  - first:
+      213: 5602161058918137532
+    second: ConvertionRune_Azul1-Sheet_5
+  - first:
+      213: -8235668967711352629
+    second: ConvertionRune_Azul1-Sheet_6
+  - first:
+      213: 3709910837991575789
+    second: ConvertionRune_Azul1-Sheet_7
+  - first:
+      213: -6838347283865243051
+    second: ConvertionRune_Azul1-Sheet_8
+  - first:
+      213: -1844617338354482419
+    second: ConvertionRune_Azul1-Sheet_9
+  - first:
+      213: -2709288059633301450
+    second: ConvertionRune_Azul1-Sheet_10
+  - first:
+      213: 3814965201737908370
+    second: ConvertionRune_Azul1-Sheet_11
+  - first:
+      213: 2982812462114471561
+    second: ConvertionRune_Azul1-Sheet_12
+  - first:
+      213: 8705187060783617517
+    second: ConvertionRune_Azul1-Sheet_13
+  - first:
+      213: -3691211603528433057
+    second: ConvertionRune_Azul1-Sheet_14
+  - first:
+      213: -1810229798017020064
+    second: ConvertionRune_Azul1-Sheet_15
+  - first:
+      213: -589929301184648185
+    second: ConvertionRune_Azul1-Sheet_16
+  - first:
+      213: -2668373388051185113
+    second: ConvertionRune_Azul1-Sheet_17
+  - first:
+      213: 7725750900927035926
+    second: ConvertionRune_Azul1-Sheet_18
+  - first:
+      213: -6753098941209613141
+    second: ConvertionRune_Azul1-Sheet_19
+  - first:
+      213: 2271603488424713772
+    second: ConvertionRune_Azul1-Sheet_20
+  - first:
+      213: 8974522399668016914
+    second: ConvertionRune_Azul1-Sheet_21
+  - first:
+      213: 282037220394819355
+    second: ConvertionRune_Azul1-Sheet_22
+  - first:
+      213: -7951366127289390833
+    second: ConvertionRune_Azul1-Sheet_23
+  - first:
+      213: 1553285026899672795
+    second: ConvertionRune_Azul1-Sheet_24
+  - first:
+      213: -1025940161847809186
+    second: ConvertionRune_Azul1-Sheet_25
+  - first:
+      213: -167256386377718660
+    second: ConvertionRune_Azul1-Sheet_26
+  - first:
+      213: 8610060101978186814
+    second: ConvertionRune_Azul1-Sheet_27
+  - first:
+      213: 8501585531255265849
+    second: ConvertionRune_Azul1-Sheet_28
+  - first:
+      213: -8435731286648233794
+    second: ConvertionRune_Azul1-Sheet_29
+  - first:
+      213: -7439651449367880988
+    second: ConvertionRune_Azul1-Sheet_30
+  - first:
+      213: 4685226327667809753
+    second: ConvertionRune_Azul1-Sheet_31
+  - first:
+      213: 317496025981572191
+    second: ConvertionRune_Azul1-Sheet_32
+  - first:
+      213: 8643050968503662258
+    second: ConvertionRune_Azul1-Sheet_33
+  - first:
+      213: -8917764170561299836
+    second: ConvertionRune_Azul1-Sheet_34
+  - first:
+      213: -6516129954669601034
+    second: ConvertionRune_Azul1-Sheet_35
+  - first:
+      213: -5517386944279521811
+    second: ConvertionRune_Azul1-Sheet_36
+  - first:
+      213: 9130490204133665527
+    second: ConvertionRune_Azul1-Sheet_37
+  - first:
+      213: -2482503897534033593
+    second: ConvertionRune_Azul1-Sheet_38
+  - first:
+      213: -2724567361073983357
+    second: ConvertionRune_Azul1-Sheet_39
+  - first:
+      213: 1065133131182778793
+    second: ConvertionRune_Azul1-Sheet_40
+  - first:
+      213: -1239683525620500203
+    second: ConvertionRune_Azul1-Sheet_41
+  - first:
+      213: -3246583845031090870
+    second: ConvertionRune_Azul1-Sheet_42
+  - first:
+      213: 5027607831771174760
+    second: ConvertionRune_Azul1-Sheet_43
+  - first:
+      213: -2718837810402770235
+    second: ConvertionRune_Azul1-Sheet_44
+  - first:
+      213: 1382611837810675980
+    second: ConvertionRune_Azul1-Sheet_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ConvertionRune_Azul1-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af423a0704d206250800000000000000
+      internalID: 5935794063665210618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_Azul1-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c0e79929278e2180800000000000000
+      internalID: -9138217983026929469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_Azul1-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82a9571de4460bff0800000000000000
+      internalID: -22407708452480472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_Azul1-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f56ffce0f1eddf50800000000000000
+      internalID: 6907925828340770288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_Azul1-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1555c0e8eedd6fbb0800000000000000
+      internalID: -4902487127691078319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_Azul1-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbe77533dcfdebd40800000000000000
+      internalID: 5602161058918137532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_Azul1-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc85bd355b605bd80800000000000000
+      internalID: -8235668967711352629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_Azul1-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de01cde40404c7330800000000000000
+      internalID: 3709910837991575789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_Azul1-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 552747e506f4911a0800000000000000
+      internalID: -6838347283865243051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8e90c43b5e22a394eaa900f0c1bdc0c2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":192.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      ConvertionRune_Azul1-Sheet_0: 5935794063665210618
+      ConvertionRune_Azul1-Sheet_1: -9138217983026929469
+      ConvertionRune_Azul1-Sheet_2: -22407708452480472
+      ConvertionRune_Azul1-Sheet_3: 6907925828340770288
+      ConvertionRune_Azul1-Sheet_4: -4902487127691078319
+      ConvertionRune_Azul1-Sheet_5: 5602161058918137532
+      ConvertionRune_Azul1-Sheet_6: -8235668967711352629
+      ConvertionRune_Azul1-Sheet_7: 3709910837991575789
+      ConvertionRune_Azul1-Sheet_8: -6838347283865243051
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

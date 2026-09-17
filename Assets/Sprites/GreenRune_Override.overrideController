@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GreenRune_Override
+  m_Controller: {fileID: 9100000, guid: 17eb4ad7d47f4de44806511e007b3886, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: aa9c1b4c454d13e48bf50d6ddd3d8356, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f542127f51943454fb5faa74a5cc388c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 523c8ec682f36c5418d37d269d306c1e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3fc0063a782d17f44a0025532621e50a, type: 2}

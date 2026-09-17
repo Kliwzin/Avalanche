@@ -1,0 +1,460 @@
+fileFormatVersion: 2
+guid: 51862daff1ec06d409cedf0073062310
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8807603907017528705
+    second: BlocoDeNeve#1-Sheet_0
+  - first:
+      213: -3336645480929485865
+    second: BlocoDeNeve#1-Sheet_1
+  - first:
+      213: 498742692284112466
+    second: BlocoDeNeve#1-Sheet_2
+  - first:
+      213: 1977302028097726573
+    second: BlocoDeNeve#1-Sheet_3
+  - first:
+      213: 1104200841528077380
+    second: BlocoDeNeve#1-Sheet_4
+  - first:
+      213: -7219798909534518140
+    second: BlocoDeNeve#1-Sheet_5
+  - first:
+      213: -7524707367676720542
+    second: BlocoDeNeve#1-Sheet_6
+  - first:
+      213: -4150934041894095742
+    second: BlocoDeNeve#1-Sheet_7
+  - first:
+      213: 1734683916236321912
+    second: BlocoDeNeve#1-Sheet_8
+  - first:
+      213: -2939916541094043148
+    second: BlocoDeNeve#1-Sheet_9
+  - first:
+      213: 2176346084590052562
+    second: BlocoDeNeve#1-Sheet_10
+  - first:
+      213: 2247077376124912153
+    second: BlocoDeNeve#1-Sheet_11
+  - first:
+      213: 880577929039728787
+    second: BlocoDeNeve#1-Sheet_12
+  - first:
+      213: -5247421801888291344
+    second: BlocoDeNeve#1-Sheet_13
+  - first:
+      213: 5896596560014911165
+    second: BlocoDeNeve#1-Sheet_14
+  - first:
+      213: 4099473428786358932
+    second: BlocoDeNeve#1-Sheet_15
+  - first:
+      213: -6904750333732013898
+    second: BlocoDeNeve#1-Sheet_16
+  - first:
+      213: -3157984295625549260
+    second: BlocoDeNeve#1-Sheet_17
+  - first:
+      213: -4563553424142712746
+    second: BlocoDeNeve#1-Sheet_18
+  - first:
+      213: -5208279827528536807
+    second: BlocoDeNeve#1-Sheet_19
+  - first:
+      213: -252844043984003371
+    second: BlocoDeNeve#1-Sheet_20
+  - first:
+      213: -1051451768728571186
+    second: BlocoDeNeve#1-Sheet_21
+  - first:
+      213: -3427898529299331994
+    second: BlocoDeNeve#1-Sheet_22
+  - first:
+      213: 5527941507818816857
+    second: BlocoDeNeve#1-Sheet_23
+  - first:
+      213: 8692393511139861788
+    second: BlocoDeNeve#1-Sheet_24
+  - first:
+      213: -1382898711833899978
+    second: BlocoDeNeve#1-Sheet_25
+  - first:
+      213: -3847728780278617763
+    second: BlocoDeNeve#1-Sheet_26
+  - first:
+      213: 8313307068772988492
+    second: BlocoDeNeve#1-Sheet_27
+  - first:
+      213: -7135054839403264278
+    second: BlocoDeNeve#1-Sheet_28
+  - first:
+      213: -3382908096903124018
+    second: BlocoDeNeve#1-Sheet_29
+  - first:
+      213: -8997620528300602079
+    second: BlocoDeNeve#1-Sheet_30
+  - first:
+      213: -5003187406488028213
+    second: BlocoDeNeve#1-Sheet_31
+  - first:
+      213: -165828887952011938
+    second: BlocoDeNeve#1-Sheet_32
+  - first:
+      213: -1581777362499562128
+    second: BlocoDeNeve#1-Sheet_33
+  - first:
+      213: -761313685449137497
+    second: BlocoDeNeve#1-Sheet_34
+  - first:
+      213: 1441256742154481652
+    second: BlocoDeNeve#1-Sheet_35
+  - first:
+      213: -6158069351453248747
+    second: BlocoDeNeve#1-Sheet_36
+  - first:
+      213: -21513797770125539
+    second: BlocoDeNeve#1-Sheet_37
+  - first:
+      213: -5645245531565798855
+    second: BlocoDeNeve#1-Sheet_38
+  - first:
+      213: 6899839838437406962
+    second: BlocoDeNeve#1-Sheet_39
+  - first:
+      213: -7244906479075030295
+    second: BlocoDeNeve#1-Sheet_40
+  - first:
+      213: -3946598410182873999
+    second: BlocoDeNeve#1-Sheet_41
+  - first:
+      213: 3962671935979715505
+    second: BlocoDeNeve#1-Sheet_42
+  - first:
+      213: -2849909154688522817
+    second: BlocoDeNeve#1-Sheet_43
+  - first:
+      213: -6615622676884876251
+    second: BlocoDeNeve#1-Sheet_44
+  - first:
+      213: -4963940979451809344
+    second: BlocoDeNeve#1-Sheet_45
+  - first:
+      213: 4709004031762423666
+    second: BlocoDeNeve#1-Sheet_46
+  - first:
+      213: 9152911097525314081
+    second: BlocoDeNeve#1-Sheet_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SnowBlockRune_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 290832801a298074a923dfc2ddbd1993
+      internalID: -1891688436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowBlockRune_1
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 562cba4418c5a7a45a212c6e4d56ad8e
+      internalID: 1010282773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowBlockRune_2
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf36c787500c3644ba83844f614eae9
+      internalID: -1157384619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowBlockRune_3
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c8e3ef540ff1af489f4988f0dda9763
+      internalID: -368137643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowBlockRune_4
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a2bc3c12d105d4dbc3c24cbb8ee426
+      internalID: -888508929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowBlockRune_5
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7edc35696c7ad9a469e5d24f9420269b
+      internalID: 1759901002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowBlockRune_6
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7157b7f989d1c9a48bb8866588561430
+      internalID: -73467925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowBlockRune_7
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6126c47599ec661469f731befb1cc86d
+      internalID: 1120055382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5334b16c31dfa28499c8aae7025643c4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":135.0,"y":192.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      SnowBlockRune_0: -1891688436
+      SnowBlockRune_1: 1010282773
+      SnowBlockRune_2: -1157384619
+      SnowBlockRune_3: -368137643
+      SnowBlockRune_4: -888508929
+      SnowBlockRune_5: 1759901002
+      SnowBlockRune_6: -73467925
+      SnowBlockRune_7: 1120055382
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

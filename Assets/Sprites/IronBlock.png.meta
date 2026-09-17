@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 419473ba6f78d744e89c39d113974112
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3699666163275690941
+    second: RunaMetalica#O-Sheet_0
+  - first:
+      213: 3299941222249239008
+    second: RunaMetalica#O-Sheet_1
+  - first:
+      213: -7260567834213184721
+    second: RunaMetalica#O-Sheet_2
+  - first:
+      213: -1643657534533049450
+    second: RunaMetalica#O-Sheet_3
+  - first:
+      213: -977807231435386171
+    second: RunaMetalica#O-Sheet_4
+  - first:
+      213: 8598358631495076466
+    second: RunaMetalica#O-Sheet_5
+  - first:
+      213: 1633614030061889591
+    second: RunaMetalica#O-Sheet_6
+  - first:
+      213: 7378131849343317545
+    second: RunaMetalica#O-Sheet_7
+  - first:
+      213: 6438055011139813144
+    second: RunaMetalica#O-Sheet_8
+  - first:
+      213: 6470401735868559880
+    second: RunaMetalica#O-Sheet_9
+  - first:
+      213: -2386373938588349173
+    second: RunaMetalica#O-Sheet_10
+  - first:
+      213: 3985386175402234448
+    second: RunaMetalica#O-Sheet_11
+  - first:
+      213: -7308161251720101965
+    second: RunaMetalica#O-Sheet_12
+  - first:
+      213: -2849129423730120407
+    second: RunaMetalica#O-Sheet_13
+  - first:
+      213: -8498605918710955887
+    second: RunaMetalica#O-Sheet_14
+  - first:
+      213: -3092028034807964455
+    second: RunaMetalica#O-Sheet_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RunaMetalica#O-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 129
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34c8b66e93528acc0800000000000000
+      internalID: -3699666163275690941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunaMetalica#O-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e195dbce0fbbcd20800000000000000
+      internalID: 3299941222249239008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunaMetalica#O-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 0
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2b881ed5084d3b90800000000000000
+      internalID: -7260567834213184721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunaMetalica#O-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 0
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69363c94e2e8039e0800000000000000
+      internalID: -1643657534533049450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunaMetalica#O-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 0
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c25c7fe0812e62f0800000000000000
+      internalID: -977807231435386171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunaMetalica#O-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 0
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a8da98e91835770800000000000000
+      internalID: 8598358631495076466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunaMetalica#O-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 0
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 738eee91e43cba610800000000000000
+      internalID: 1633614030061889591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunaMetalica#O-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 0
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 926ba1273d3646660800000000000000
+      internalID: 7378131849343317545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunaMetalica#O-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 0
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f796f1ce0985950800000000000000
+      internalID: 6438055011139813144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunaMetalica#O-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 0
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 802348cd81c7bc950800000000000000
+      internalID: 6470401735868559880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunaMetalica#O-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 0
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0d0131eb85e1eed0800000000000000
+      internalID: -2386373938588349173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunaMetalica#O-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 0
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0525a9d6c9fee4730800000000000000
+      internalID: 3985386175402234448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunaMetalica#O-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 0
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bff2f5df02349a90800000000000000
+      internalID: -7308161251720101965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunaMetalica#O-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 0
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 929e37b62ebd578d0800000000000000
+      internalID: -2849129423730120407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunaMetalica#O-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1903
+        y: 0
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1908339c1f2ee0a80800000000000000
+      internalID: -8498605918710955887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunaMetalica#O-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 2039
+        y: 0
+        width: 129
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dcd8b572e8e615d0800000000000000
+      internalID: -3092028034807964455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RunaMetalica#O-Sheet_0: -3699666163275690941
+      RunaMetalica#O-Sheet_1: 3299941222249239008
+      RunaMetalica#O-Sheet_10: -2386373938588349173
+      RunaMetalica#O-Sheet_11: 3985386175402234448
+      RunaMetalica#O-Sheet_12: -7308161251720101965
+      RunaMetalica#O-Sheet_13: -2849129423730120407
+      RunaMetalica#O-Sheet_14: -8498605918710955887
+      RunaMetalica#O-Sheet_15: -3092028034807964455
+      RunaMetalica#O-Sheet_2: -7260567834213184721
+      RunaMetalica#O-Sheet_3: -1643657534533049450
+      RunaMetalica#O-Sheet_4: -977807231435386171
+      RunaMetalica#O-Sheet_5: 8598358631495076466
+      RunaMetalica#O-Sheet_6: 1633614030061889591
+      RunaMetalica#O-Sheet_7: 7378131849343317545
+      RunaMetalica#O-Sheet_8: 6438055011139813144
+      RunaMetalica#O-Sheet_9: 6470401735868559880
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

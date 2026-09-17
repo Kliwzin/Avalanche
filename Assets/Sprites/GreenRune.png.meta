@@ -1,0 +1,501 @@
+fileFormatVersion: 2
+guid: 3bbf0976a87a8fe4e849c1451dffd2b4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3352431075865171518
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_0
+  - first:
+      213: -7556647082370805217
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_1
+  - first:
+      213: -4625570405648510563
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_2
+  - first:
+      213: -6112722114947100579
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_3
+  - first:
+      213: 8872503067231802174
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_4
+  - first:
+      213: 1689365470069800076
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_5
+  - first:
+      213: 4944431024307048788
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_6
+  - first:
+      213: -7873530376993068256
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_7
+  - first:
+      213: 1682168145850790776
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_8
+  - first:
+      213: -6601467785453687705
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_9
+  - first:
+      213: -6639591038662167644
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_10
+  - first:
+      213: 6575374485123021592
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_11
+  - first:
+      213: -3641746438992510275
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_12
+  - first:
+      213: -3619472435566084354
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_13
+  - first:
+      213: 7614264921309386137
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_14
+  - first:
+      213: -6061585503580895235
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_15
+  - first:
+      213: -5485854681126691236
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_16
+  - first:
+      213: 268681541825747294
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_17
+  - first:
+      213: 8341811590129008832
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_18
+  - first:
+      213: -5690188509113302379
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_19
+  - first:
+      213: -6762631778716368237
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_20
+  - first:
+      213: -5877481127373986791
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_21
+  - first:
+      213: -382132645029269185
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_22
+  - first:
+      213: -8927317875395130902
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_23
+  - first:
+      213: 3449118119185093941
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_24
+  - first:
+      213: 3072533137353407366
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_25
+  - first:
+      213: -7181969040532644372
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_26
+  - first:
+      213: -2951703381914583008
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_27
+  - first:
+      213: 2735402856907000796
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_28
+  - first:
+      213: 7051419627250592228
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_29
+  - first:
+      213: 1573394607252023316
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_30
+  - first:
+      213: -8500118515634755442
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_31
+  - first:
+      213: -1136577189706355764
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_32
+  - first:
+      213: 6655115442358023741
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_33
+  - first:
+      213: 1979648346410543390
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_34
+  - first:
+      213: 358172360771073800
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_35
+  - first:
+      213: 7838353353438346215
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_36
+  - first:
+      213: -2591748814120927544
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_37
+  - first:
+      213: 6756197063888062324
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_38
+  - first:
+      213: 1058871861551806002
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_39
+  - first:
+      213: 1764414929323249297
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_40
+  - first:
+      213: -1964684617880350050
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_41
+  - first:
+      213: -1370621655724000021
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_42
+  - first:
+      213: 6814367165287041245
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_43
+  - first:
+      213: -5338472542383937761
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_44
+  - first:
+      213: 4021769331095634749
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_45
+  - first:
+      213: 4399853001806897586
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_46
+  - first:
+      213: -1346718386123721171
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_47
+  - first:
+      213: -2904834223360406405
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_48
+  - first:
+      213: -6756531269237078740
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_49
+  - first:
+      213: 438858970857012737
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_50
+  - first:
+      213: 33926142772136669
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_51
+  - first:
+      213: 1296461506351874699
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_52
+  - first:
+      213: -6885028902886435349
+    second: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_53
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e369ce23d4a368e20800000000000000
+      internalID: 3352431075865171518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f12db42f385612790800000000000000
+      internalID: -7556647082370805217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d91d2cf293caecfb0800000000000000
+      internalID: -4625570405648510563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5057ef7f9f3b2ba0800000000000000
+      internalID: -6112722114947100579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e335ae6f786712b70800000000000000
+      internalID: 8872503067231802174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8c3253c1f4d17710800000000000000
+      internalID: 1689365470069800076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4511e34e1d52e9440800000000000000
+      internalID: 4944431024307048788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02ba41f76d99bb290800000000000000
+      internalID: -7873530376993068256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0
+        width: 135
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 873f9e12403485710800000000000000
+      internalID: 1682168145850790776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9b40ec110d0ae5c40ad24e1c95ebd69f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":135.0,"y":192.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_0: 3352431075865171518
+      ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_1: -7556647082370805217
+      ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_2: -4625570405648510563
+      ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_3: -6112722114947100579
+      ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_4: 8872503067231802174
+      ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_5: 1689365470069800076
+      ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_6: 4944431024307048788
+      ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_7: -7873530376993068256
+      ConvertionRune_VerdeGasolina(Verde_Que_N_Sabe_Se_E_Verde_ou_Azul)#O-Sheet_8: 1682168145850790776
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
