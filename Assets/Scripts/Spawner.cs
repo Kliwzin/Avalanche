@@ -13,6 +13,9 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
+        if (weights != null && weights.Length > 0 && weights.Length != tetrominosGameplay.Length)
+            Debug.LogWarning("[Spawner] 'weights' tem tamanho diferente de 'tetrominosGameplay'. Os pesos estão sendo ignorados.", this);
+
         PickNext();
         Spawn();
     }
@@ -36,7 +39,7 @@ public class Spawner : MonoBehaviour
     {
         nextIndex = GetWeightedIndex();
 
-        if (nextPiecePreview)
+        if (nextPiecePreview && tetrominosPreview != null && nextIndex < tetrominosPreview.Length)
         {
             foreach (Transform child in nextPiecePreview)
                 Destroy(child.gameObject);

@@ -12,24 +12,44 @@ public class GridManager : MonoBehaviour
 
     public static Vector2 Round(Vector2 v) => new Vector2(Mathf.Round(v.x), Mathf.Round(v.y));
 
+    public static bool IsMetal(Transform t)
+    {
+        if (t == null) return false;
+        return t.GetComponentInParent<MetallicBlock>() != null;
+    }
+
+    public static void ResetGrid()
+    {
+        grid = new Transform[width, height];
+        isAnimating = false;
+    }
+
     public static IEnumerator ResolveLinesAndFall(float stepDelay = 0.06f)
     {
         if (isAnimating) yield break;
         isAnimating = true;
 
-        bool removedAny = false;
+        int chain = 0;
 
-        for (int y = 0; y < height; y++)
+        while (chain < 30)
         {
-            if (!IsLineFull(y)) continue;
+            int linesThisPass = 0;
 
-            DeleteLineKeepMetal(y);
-            ScoreManager.AddLineScore();
-            removedAny = true;
-        }
+            for (int y = 0; y < height; y++)
+            {
+                if (!IsLineFull(y)) continue;
 
-        if (removedAny)
+                DeleteLine(y);
+                linesThisPass++;
+            }
+
+            if (linesThisPass == 0) break;
+
+            chain++;
+            ScoreManager.AddLineScore(linesThisPass, chain);
+
             yield return CollapseAnimated(stepDelay);
+        }
 
         isAnimating = false;
     }
@@ -37,18 +57,21 @@ public class GridManager : MonoBehaviour
     static bool IsLineFull(int y)
     {
         for (int x = 0; x < width; x++)
-            if (grid[x, y] == null) return false;
+        {
+            Transform t = grid[x, y];
+
+            if (t == null) return false;   // buraco: linha incompleta
+            if (IsMetal(t)) return false;  // aço: linha não pode ser completada
+        }
         return true;
     }
 
-    static void DeleteLineKeepMetal(int y)
+    static void DeleteLine(int y)
     {
         for (int x = 0; x < width; x++)
         {
-            var t = grid[x, y];
+            Transform t = grid[x, y];
             if (t == null) continue;
-
-            if (t.GetComponent<MetallicBlock>() != null) continue;
 
             UnityEngine.Object.Destroy(t.gameObject);
             grid[x, y] = null;
@@ -70,7 +93,8 @@ public class GridManager : MonoBehaviour
                     Transform t = grid[x, y];
                     if (t == null) continue;
 
-                    if (t.GetComponent<MetallicBlock>() != null) continue;
+                    // Bloco de aço fica flutuando onde está.
+                    if (IsMetal(t)) continue;
 
                     if (grid[x, y - 1] == null)
                     {

@@ -6,26 +6,52 @@ public class ScoreManager : MonoBehaviour
     public static int score;
     public TextMeshProUGUI scoreText;
 
+    [Header("Design")]
+    [Tooltip("Dar 1 ponto por segundo só por estar vivo. Ver nota de design.")]
+    [SerializeField] bool scorePerSecond = true;
+
     float timeCounter = 0f;
+    int lastShownScore = -1;
 
     void Update()
     {
         if (Time.timeScale == 0) return;
 
-        timeCounter += Time.deltaTime;
-
-        if (timeCounter >= 1f)
+        if (scorePerSecond)
         {
-            score += 1;
-            timeCounter = 0f;
+            timeCounter += Time.deltaTime;
+
+            while (timeCounter >= 1f)
+            {
+                score += 1;
+                timeCounter -= 1f;
+            }
         }
 
-        scoreText.text = $"{score}";
+        if(score != lastShownScore)
+        {
+            lastShownScore = score;
+            if (scoreText) scoreText.text = $"{score}";
+        }
     }
 
-    public static void AddLineScore()
+
+    //lines = quantas linhas sumiram
+    //chain = elo da cascata
+
+    public static void AddLineScore(int lines, int chain = 1)
     {
-        score += 100;
+        int baseScore;
+
+        switch(lines)
+        {
+            case 1: baseScore = 100; break;
+            case 2: baseScore = 300; break;
+            case 3: baseScore = 500; break;
+            default: baseScore = 800; break; //4 ou mais
+        }
+
+        score += baseScore * chain;
     }
 
     public static void AddDropScore()

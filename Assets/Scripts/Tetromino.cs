@@ -14,8 +14,30 @@ public class Tetromino : MonoBehaviour
     [Header("Line Fall Visual")]
     [SerializeField] float lineFallStepDelay = 0.06f;
 
+    [Header("Movimento lateral")]
+    [Tooltip("Espera antes de a tecla segurada começar a repetir")]
+    [SerializeField] float dasDelay = 0.17f;
+    [Tooltip("Intervalo entre repetições depois que começou")]
+    [SerializeField] float dasRepeat = 0.05f;
+
+    // Deslocamentos testados na rotação, em ordem de preferência.
+    static readonly Vector3[] kicks =
+    {
+        Vector3.zero,               // no lugar
+        Vector3.right,              // empurra 1 para a direita
+        Vector3.left,               // empurra 1 para a esquerda
+        Vector3.right * 2f,         // 2 para a direita (peça I na parede)
+        Vector3.left * 2f,          // 2 para a esquerda
+        Vector3.up,                 // floor kick
+        Vector3.up + Vector3.right,
+        Vector3.up + Vector3.left,
+    };
+
     float previousTime;
     bool hardDropping;
+
+    float horizontalTimer;
+    int lastDirection;
 
     Spawner spawner;
 
@@ -34,14 +56,9 @@ public class Tetromino : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow)) TryMove(Vector3.left);
-        if (Input.GetKeyDown(KeyCode.RightArrow)) TryMove(Vector3.right);
+        HandleHorizontal();
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            transform.Rotate(0, 0, 90);
-            if (!ValidMove()) transform.Rotate(0, 0, -90);
-        }
+        if (Input.GetKeyDown(KeyCode.UpArrow)) TryRotate();
 
         float fall = GetCurrentFallTime();
         float currentFall = Input.GetKey(KeyCode.DownArrow) ? fall / 10f : fall;
@@ -59,6 +76,55 @@ public class Tetromino : MonoBehaviour
 
             previousTime = Time.time;
         }
+    }
+
+    void HandleHorizontal()
+    {
+        int dir = 0;
+        if (Input.GetKey(KeyCode.LeftArrow)) dir -= 1;
+        if (Input.GetKey(KeyCode.RightArrow)) dir += 1;
+
+        // Nenhuma tecla, ou as duas ao mesmo tempo: não anda
+        if (dir == 0)
+        {
+            lastDirection = 0;
+            return;
+        }
+
+        // Primeiro toque nessa direção: move na hora e arma a espera
+        if (dir != lastDirection)
+        {
+            lastDirection = dir;
+            horizontalTimer = dasDelay;
+            TryMove(Vector3.right * dir);
+            return;
+        }
+
+        // Tecla continua segurada: repete depois da espera
+        horizontalTimer -= Time.deltaTime;
+
+        if (horizontalTimer <= 0f)
+        {
+            horizontalTimer = dasRepeat;
+            TryMove(Vector3.right * dir);
+        }
+    }
+
+    void TryRotate()
+    {
+        Vector3 original = transform.position;
+
+        transform.Rotate(0, 0, 90);
+
+        foreach (Vector3 kick in kicks)
+        {
+            transform.position = original + kick;
+            if (ValidMove()) return;
+        }
+
+        // Nenhum deslocamento serviu: desfaz a rotação
+        transform.position = original;
+        transform.Rotate(0, 0, -90);
     }
 
     void TryMove(Vector3 delta)
@@ -112,20 +178,28 @@ public class Tetromino : MonoBehaviour
 
         for (int i = 0; i < blocksRoot.childCount; i++)
         {
-            Transform child = blocksRoot.GetChild(i);
-            Vector2 pos = GridManager.Round(child.position);
-
-            if (pos.x < 0 || pos.x >= GridManager.width || pos.y < 0)
-                return false;
+            Vector2 pos = GridManager.Round(blocksRoot.GetChild(i).position);
 
             if (pos.y >= GridManager.height)
             {
-                GameManager.Instance.GameOver();
+                if (GameManager.Instance != null) GameManager.Instance.GameOver();
                 return false;
             }
 
+            if (pos.x < 0 || pos.x >= GridManager.width || pos.y < 0)
+            {
+                Debug.LogError($"[Tetromino] Bloco fora do tabuleiro em {pos} na peça {name}.", this);
+                return false;
+            }
+        }
+
+        for (int i = 0; i < blocksRoot.childCount; i++)
+        {
+            Transform child = blocksRoot.GetChild(i);
+            Vector2 pos = GridManager.Round(child.position);
             GridManager.grid[(int)pos.x, (int)pos.y] = child;
         }
+
         return true;
     }
 
