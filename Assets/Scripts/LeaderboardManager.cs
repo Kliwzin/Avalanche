@@ -2,7 +2,7 @@ using UnityEngine;
 
 public static class LeaderboardManager
 {
-    const int MAX = 5;
+    public const int MAX = 5;
 
     public static void SaveScore(string name, int score)
     {

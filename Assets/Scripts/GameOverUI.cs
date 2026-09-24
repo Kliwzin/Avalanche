@@ -33,7 +33,7 @@ public class GameOverUI : MonoBehaviour
         saved = true;
 
         // atualiza o leaderboard
-        LeaderboardUI ui = FindAnyObjectByType<LeaderboardUI>();
+        LeaderboardUI ui = FindAnyObjectByType<LeaderboardUI>(FindObjectsInactive.Include);
         if (ui != null) ui.Refresh();
     }
 }

@@ -160,7 +160,6 @@ MonoBehaviour:
   - {fileID: 9176656948449750916, guid: 4bb26d8975b74bb4bb22aef2fe57eac4, type: 3}
   - {fileID: 9176656948449750916, guid: 8da406e8d19d4484b9940510fc677088, type: 3}
   - {fileID: 9176656948449750916, guid: a6497c260b9cf80448942c70926033b8, type: 3}
-  - {fileID: 9176656948449750916, guid: d439feff796bd3841a8f012d597728f3, type: 3}
   tetrominosPreview:
   - {fileID: 9176656948449750916, guid: e902297de3c944f40883f2a01bca0853, type: 3}
   - {fileID: 1335331484638305633, guid: ce5cbc3cfc16156478b116e792fd8bf4, type: 3}
@@ -173,7 +172,6 @@ MonoBehaviour:
   - {fileID: 9176656948449750916, guid: db48ad18ffddd9340885753f5593a171, type: 3}
   - {fileID: 9176656948449750916, guid: 8bca54cb8bcff44438f6ac2234ba4402, type: 3}
   - {fileID: 9176656948449750916, guid: ed1be36d9eea1b34d8729ee2198779de, type: 3}
-  - {fileID: 9176656948449750916, guid: 7199aca8e62b9b64ab60868465d2ef50, type: 3}
   nextPiecePreview: {fileID: 1430054068}
   weights:
   - 10
@@ -187,7 +185,12 @@ MonoBehaviour:
   - 5
   - 5
   - 5
-  - 8
+  metalSprite: {fileID: -3699666163275690941, guid: 419473ba6f78d744e89c39d113974112, type: 3}
+  metalAnimator: {fileID: 9100000, guid: 2d60a1542aa89e44db4bb267e6b38fa0, type: 2}
+  metalStartLines: 1
+  linesPerExtraMetal: 15
+  metalMaxPerPiece: 3
+  metalChance: 0.407
 --- !u!4 &216202755
 Transform:
   m_ObjectHideFlags: 0
@@ -676,6 +679,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 523290706}
   m_CullTransparentMesh: 1
+--- !u!1 &661687505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 661687506}
+  - component: {fileID: 661687507}
+  m_Layer: 0
+  m_Name: EmptyGameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &661687506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661687505}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.50167, y: 10.02069, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &661687507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661687505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 939187a19f60d534f9de1c7d3e37c4c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AvalancheManager
+  avalancheBlockPrefab: {fileID: 7706376280009856510, guid: 5609e9d6ab855aa46b93e5e221f6e007, type: 3}
+  startInterval: 20
+  minInterval: 8
+  linesToSpeedUp: 10
+  warningUI: {fileID: 0}
+  warningTime: 1.2
 --- !u!1 &777543071
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,7 +1048,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656bu
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -1044,6 +1097,7 @@ GameObject:
   m_IsActive: 1
 --- !u!212 &993283952
 SpriteRenderer:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1089,6 +1143,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_Sprite: {fileID: -2492319226360305735, guid: a7f5b2f0c820ac640949621b4e5977ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1098,8 +1153,8 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!4 &993283953
 Transform:
   m_ObjectHideFlags: 0
@@ -1192,6 +1247,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
+  m_UseReflectionProbes: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -1393,6 +1449,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1266171178
 SpriteRenderer:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1438,6 +1495,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 6845380836524414690, guid: 9dc53a287153c34468eab050d193e954, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1447,8 +1505,8 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!1 &1311613411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,7 +1596,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656bu
   m_enableExtraPadding: 1
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -1580,6 +1638,8 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+  m_MaxWidth: -1
+  m_MaxHeight: -1
 --- !u!222 &1311613414
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1714,7 +1774,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656bu
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -1849,6 +1909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
   scoreText: {fileID: 1408507265}
+  scorePerSecond: 1
 --- !u!4 &1446998457
 Transform:
   m_ObjectHideFlags: 0
@@ -1941,6 +2002,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
+  m_UseReflectionProbes: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -2036,6 +2098,7 @@ GameObject:
   m_IsActive: 1
 --- !u!212 &1741693425
 SpriteRenderer:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2081,6 +2144,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 3573842330827657242, guid: c3390506b5ea7454ab269ed0d03988f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2090,8 +2154,8 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!4 &1741693426
 Transform:
   m_ObjectHideFlags: 0
@@ -2407,7 +2471,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656bu
   m_enableExtraPadding: 1
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -2837,6 +2901,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2112827348
 SpriteRenderer:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2882,6 +2947,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 6991143387574584326, guid: 35414009849b8ef46b18acac00b92485, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2891,8 +2957,8 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2907,3 +2973,4 @@ SceneRoots:
   - {fileID: 216202755}
   - {fileID: 1430054068}
   - {fileID: 1034255740}
+  - {fileID: 661687506}

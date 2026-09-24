@@ -5,6 +5,7 @@ public class ScoreManager : MonoBehaviour
 {
     public static int score;
     public TextMeshProUGUI scoreText;
+    public static int linesCleared;
 
     [Header("Design")]
     [Tooltip("Dar 1 ponto por segundo só por estar vivo. Ver nota de design.")]
@@ -41,14 +42,16 @@ public class ScoreManager : MonoBehaviour
 
     public static void AddLineScore(int lines, int chain = 1)
     {
+        linesCleared += lines;
+
         int baseScore;
 
-        switch(lines)
+        switch (lines)
         {
             case 1: baseScore = 100; break;
             case 2: baseScore = 300; break;
             case 3: baseScore = 500; break;
-            default: baseScore = 800; break; //4 ou mais
+            default: baseScore = 800; break;
         }
 
         score += baseScore * chain;

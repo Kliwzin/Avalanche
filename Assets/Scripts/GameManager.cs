@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
         IsGameOver = false;
         Time.timeScale = 1;
         ScoreManager.score = 0;
+        ScoreManager.linesCleared = 0;
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

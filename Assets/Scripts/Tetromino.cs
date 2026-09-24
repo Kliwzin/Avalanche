@@ -6,7 +6,9 @@ public class Tetromino : MonoBehaviour
     [Header("Fall")]
     [SerializeField] float startFallTime = 1f;
     [SerializeField] float minFallTime = 0.2f;
-    [SerializeField] float scoreToMaxSpeed = 3000f;
+
+    [Tooltip("Linhas limpas para chegar à velocidade máxima")]
+    [SerializeField] float linesToMaxSpeed = 40f;
 
     [Header("Hard Drop")]
     [SerializeField] float hardDropStepDelay = 0.02f;
@@ -41,7 +43,11 @@ public class Tetromino : MonoBehaviour
 
     Spawner spawner;
 
-    public void Init(Spawner s) => spawner = s;
+    public void Init(Spawner s)
+    {
+        spawner = s;
+        previousTime = Time.time;
+    }
 
     void Update()
     {
@@ -156,18 +162,11 @@ public class Tetromino : MonoBehaviour
         if (!AddToGrid()) { enabled = false; return; }
 
         RuneBlock rune = GetComponentInChildren<RuneBlock>(true);
+        int colX = rune != null ? (int)GridManager.Round(rune.transform.position).x : 0;
 
         DetachBlocksFromPiece();
 
-        if (rune != null)
-        {
-            int colX = (int)GridManager.Round(rune.transform.position).x;
-            StartCoroutine(RuneFlow(rune, colX));
-        }
-        else
-        {
-            StartCoroutine(NormalFlow());
-        }
+        StartCoroutine(ResolveFlow(rune, colX));
 
         enabled = false;
     }
@@ -212,22 +211,21 @@ public class Tetromino : MonoBehaviour
 
     float GetCurrentFallTime()
     {
-        float t = Mathf.Clamp01((float)ScoreManager.score / scoreToMaxSpeed);
+        float t = Mathf.Clamp01(ScoreManager.linesCleared / linesToMaxSpeed);
         t *= t;
         return Mathf.Lerp(startFallTime, minFallTime, t);
     }
 
-    IEnumerator NormalFlow()
+    IEnumerator ResolveFlow(RuneBlock rune, int colX)
     {
-        yield return GridManager.ResolveLinesAndFall(lineFallStepDelay);
-        spawner.Spawn();
-        Destroy(gameObject);
-    }
+        if (rune != null)
+            yield return rune.Activate(colX);
 
-    IEnumerator RuneFlow(RuneBlock rune, int colX)
-    {
-        yield return rune.Activate(colX);
         yield return GridManager.ResolveLinesAndFall(lineFallStepDelay);
+
+        if (AvalancheManager.Instance != null)
+            yield return AvalancheManager.Instance.MaybeTrigger(lineFallStepDelay);
+
         spawner.Spawn();
         Destroy(gameObject);
     }

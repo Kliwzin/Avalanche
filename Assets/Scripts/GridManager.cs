@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
-    public static int width = 10;
-    public static int height = 20;
+    public const int width = 10;
+    public const int height = 20;
 
     public static Transform[,] grid = new Transform[width, height];
 
@@ -14,8 +14,38 @@ public class GridManager : MonoBehaviour
 
     public static bool IsMetal(Transform t)
     {
-        if (t == null) return false;
-        return t.GetComponentInParent<MetallicBlock>() != null;
+        return t != null
+            && t.TryGetComponent<MetallicBlock>(out var m)
+            && m.enabled;
+    }
+
+    public static bool HasAnyMetal()
+    {
+        for (int x = 0; x < width; x++)
+            for (int y = 0; y < height; y++)
+                if (IsMetal(grid[x, y])) return true;
+
+        return false;
+    }
+
+    public static void RemoveFromGrid(Transform t)
+    {
+        if (t == null) return;
+
+        Vector2 p = Round(t.position);
+        int x = (int)p.x;
+        int y = (int)p.y;
+
+        if (x < 0 || x >= width || y < 0 || y >= height) return;
+        if (grid[x, y] == t) grid[x, y] = null;
+    }
+
+    public static int TopOfColumn(int x)
+    {
+        for (int y = height - 1; y >= 0; y--)
+            if (grid[x, y] != null) return y;
+
+        return -1;
     }
 
     public static void ResetGrid()
@@ -54,14 +84,72 @@ public class GridManager : MonoBehaviour
         isAnimating = false;
     }
 
+    public static IEnumerator DropAvalancheRow(GameObject blockPrefab, float fallTime = 0.35f, float stagger = 0.03f)
+    {
+        if (blockPrefab == null) yield break;
+
+        // 1ª passada: só confere se cabe. Mesmo padrão do AddToGrid.
+        int[] targets = new int[width];
+        for (int x = 0; x < width; x++)
+        {
+            targets[x] = TopOfColumn(x) + 1;
+
+            if (targets[x] >= height)
+            {
+                if (GameManager.Instance != null) GameManager.Instance.GameOver();
+                yield break;
+            }
+        }
+
+        isAnimating = true;
+
+        // 2ª passada: cria os blocos acima do tabuleiro e já registra no grid
+        float startY = height + 1;
+        Transform[] blocks = new Transform[width];
+
+        for (int x = 0; x < width; x++)
+        {
+            var go = UnityEngine.Object.Instantiate(blockPrefab, new Vector3(x, startY, 0f), Quaternion.identity);
+            blocks[x] = go.transform;
+            grid[x, targets[x]] = go.transform;
+        }
+
+        // Anima todos caindo, cada coluna começando um pouco depois da anterior
+        float total = fallTime + (width - 1) * stagger;
+        float t = 0f;
+
+        while (t < total)
+        {
+            t += Time.deltaTime;
+
+            for (int x = 0; x < width; x++)
+            {
+                float k = Mathf.Clamp01((t - x * stagger) / fallTime);
+                k *= k;
+
+                blocks[x].position = new Vector3(x, Mathf.Lerp(startY, targets[x], k), 0f);
+            }
+
+            yield return null;
+        }
+
+        for (int x = 0; x < width; x++)
+            blocks[x].position = new Vector3(x, targets[x], 0f);
+
+        for (int x = 0; x < width; x++)
+            if (blocks[x].TryGetComponent<Animator>(out var anim)) anim.enabled = false;
+
+        isAnimating = false;
+    }
+
     static bool IsLineFull(int y)
     {
         for (int x = 0; x < width; x++)
         {
             Transform t = grid[x, y];
 
-            if (t == null) return false;   // buraco: linha incompleta
-            if (IsMetal(t)) return false;  // aço: linha não pode ser completada
+            if (t == null) return false;
+            if (IsMetal(t)) return false;
         }
         return true;
     }
@@ -92,8 +180,6 @@ public class GridManager : MonoBehaviour
                 {
                     Transform t = grid[x, y];
                     if (t == null) continue;
-
-                    // Bloco de aço fica flutuando onde está.
                     if (IsMetal(t)) continue;
 
                     if (grid[x, y - 1] == null)
@@ -125,17 +211,13 @@ public class GridManager : MonoBehaviour
             Transform t = grid[x, y];
             if (t == null) continue;
 
-            var sr = t.GetComponent<SpriteRenderer>();
-            if (sr) sr.sprite = newSprite;
-
-            var anim = t.GetComponent<Animator>();
-            if (anim) anim.enabled = false;
-
-            var metal = t.GetComponent<MetallicBlock>();
-            if (metal) UnityEngine.Object.Destroy(metal);
-
-            var metalParent = t.GetComponentInParent<MetallicBlock>();
-            if (metalParent) UnityEngine.Object.Destroy(metalParent);
+            if (t.TryGetComponent<SpriteRenderer>(out var sr)) sr.sprite = newSprite;
+            if (t.TryGetComponent<Animator>(out var anim)) anim.enabled = false;
+            if (t.TryGetComponent<MetallicBlock>(out var metal))
+            {
+                metal.enabled = false;
+                UnityEngine.Object.Destroy(metal);
+            }
 
             t.localScale = Vector3.one;
         }

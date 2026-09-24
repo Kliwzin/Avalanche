@@ -6,7 +6,7 @@ public class LeaderboardUI : MonoBehaviour
 {
     public TextMeshProUGUI leaderboardText;
 
-    void Start()
+    private void OnEnable()
     {
         Refresh();
     }
@@ -17,12 +17,12 @@ public class LeaderboardUI : MonoBehaviour
 
         var sb = new StringBuilder();
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < LeaderboardManager.MAX; i++)
         {
             var entry = LeaderboardManager.GetEntry(i);
             sb.AppendLine($"{i + 1}. {entry.name} — {entry.score}");
         }
 
-        leaderboardText.text = sb.ToString();
+        leaderboardText.text = sb.ToString().TrimEnd();
     }
 }

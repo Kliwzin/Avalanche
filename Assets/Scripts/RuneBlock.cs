@@ -31,6 +31,7 @@ public class RuneBlock : MonoBehaviour
         if (columnResultSprite)
             GridManager.PaintColumnAndConvertMetal(columnX, columnResultSprite);
 
+        GridManager.RemoveFromGrid(transform);
         Destroy(gameObject);
     }
 }
