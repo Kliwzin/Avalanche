@@ -4,7 +4,7 @@ using System.Text;
 
 public class LeaderboardUI : MonoBehaviour
 {
-    public TextMeshProUGUI leaderboardText;
+    public TMP_Text leaderboardText;
 
     private void OnEnable()
     {

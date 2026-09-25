@@ -3,34 +3,48 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject[] tetrominosGameplay;
-    public GameObject[] tetrominosPreview;
     public Transform nextPiecePreview;
 
-    [Header("Spawn Weights (mesmo tamanho dos arrays)")]
+    [Header("Spawn Weights (mesmo tamanho do array de peças)")]
     [Min(0f)] public float[] weights;
 
-    [Header("Metal")]
+    [Header("Preview")]
+    [Tooltip("Tamanho da miniatura em relação à peça no jogo")]
+    public float previewScale = 0.6f;
+
+    [Header("Metal parcial")]
     public Sprite metalSprite;
     public RuntimeAnimatorController metalAnimator;
-    [Tooltip("Linhas limpas antes de o metal começar a aparecer")]
     public int metalStartLines = 5;
-    [Tooltip("A cada tantas linhas limpas, +1 bloco de metal por peça")]
     public int linesPerExtraMetal = 15;
     public int metalMaxPerPiece = 3;
     [Range(0f, 1f)] public float metalChance = 0.35f;
 
+    [Header("Peça inteira de metal")]
+    public int fullMetalStartLines = 60;
+    [Range(0f, 1f)] public float fullMetalChance = 0.05f;
+
     int nextIndex;
+    int[] nextMetalPlan;
+
     bool[] isRunePiece;
+    bool[] isMetalPiece;
 
     void Start()
     {
-        if (weights != null && weights.Length > 0 && weights.Length != tetrominosGameplay.Length)
+        int n = tetrominosGameplay.Length;
+
+        if (weights != null && weights.Length > 0 && weights.Length != n)
             Debug.LogWarning("[Spawner] 'weights' tem tamanho diferente de 'tetrominosGameplay'. Os pesos estão sendo ignorados.", this);
 
-        // Descobre uma vez só quais prefabs são peças de runa
-        isRunePiece = new bool[tetrominosGameplay.Length];
-        for (int i = 0; i < tetrominosGameplay.Length; i++)
+        isRunePiece = new bool[n];
+        isMetalPiece = new bool[n];
+
+        for (int i = 0; i < n; i++)
+        {
             isRunePiece[i] = tetrominosGameplay[i].GetComponentInChildren<RuneBlock>(true) != null;
+            isMetalPiece[i] = tetrominosGameplay[i].GetComponentInChildren<MetallicBlock>(true) != null;
+        }
 
         PickNext();
         Spawn();
@@ -38,9 +52,13 @@ public class Spawner : MonoBehaviour
 
     public void Spawn()
     {
+        // O metal sumiu desde o sorteio: troca a runa por outra peça
+        if (isRunePiece[nextIndex] && !GridManager.HasAnyMetal())
+            PickNext();
+
         var piece = Instantiate(tetrominosGameplay[nextIndex], transform.position, Quaternion.identity);
 
-        if (!isRunePiece[nextIndex]) ApplyMetal(piece);
+        ApplyMetalPlan(piece, nextMetalPlan);
 
         var t = piece.GetComponent<Tetromino>();
         if (t != null)
@@ -52,21 +70,40 @@ public class Spawner : MonoBehaviour
         PickNext();
     }
 
-    // Transforma alguns blocos da peça em metal. Quanto mais o jogador avança,
-    // mais blocos de metal por peça.
-    void ApplyMetal(GameObject piece)
+    void PickNext()
     {
-        if (metalSprite == null) return;
-        if (ScoreManager.linesCleared < metalStartLines) return;
-        if (Random.value > metalChance) return;
+        nextIndex = GetWeightedIndex();
+        nextMetalPlan = PlanMetal(nextIndex);
+        BuildPreview();
+    }
 
-        Transform root = piece.transform.GetChild(0);
-        int total = root.childCount;
-        if (total <= 1) return;
+    // Decide AGORA quais blocos serão de metal, para miniatura e peça combinarem
+    int[] PlanMetal(int index)
+    {
+        if (metalSprite == null) return null;
+        if (isRunePiece[index] || isMetalPiece[index]) return null;
 
-        int extra = (ScoreManager.linesCleared - metalStartLines) / Mathf.Max(1, linesPerExtraMetal);
-        int count = Mathf.Clamp(1 + extra, 1, metalMaxPerPiece);
-        count = Mathf.Min(count, total - 1);
+        int lines = ScoreManager.linesCleared;
+        if (lines < metalStartLines) return null;
+
+        int total = tetrominosGameplay[index].transform.GetChild(0).childCount;
+        if (total <= 1) return null;
+
+        int count;
+
+        if (lines >= fullMetalStartLines && Random.value < fullMetalChance)
+        {
+            count = total;                                   // peça inteira
+        }
+        else
+        {
+            if (Random.value > metalChance) return null;
+
+            int extra = (lines - metalStartLines) / Mathf.Max(1, linesPerExtraMetal);
+            count = Mathf.Min(1 + extra, metalMaxPerPiece, total - 1);
+        }
+
+        if (count <= 0) return null;
 
         int[] idx = new int[total];
         for (int i = 0; i < total; i++) idx[i] = i;
@@ -75,43 +112,76 @@ public class Spawner : MonoBehaviour
         {
             int j = Random.Range(i, total);
             int tmp = idx[i]; idx[i] = idx[j]; idx[j] = tmp;
-
-            Transform b = root.GetChild(idx[i]);
-
-            if (!b.TryGetComponent<MetallicBlock>(out _))
-                b.gameObject.AddComponent<MetallicBlock>();
-
-            if (b.TryGetComponent<SpriteRenderer>(out var sr))
-                sr.sprite = metalSprite;
-
-            if (metalAnimator != null)
-            {
-                if (!b.TryGetComponent<Animator>(out var anim))
-                    anim = b.gameObject.AddComponent<Animator>();
-
-                anim.runtimeAnimatorController = metalAnimator;
-                anim.enabled = true;
-            }
         }
+
+        int[] plan = new int[count];
+        System.Array.Copy(idx, plan, count);
+        return plan;
     }
 
-    void PickNext()
+    void ApplyMetalPlan(GameObject piece, int[] plan)
     {
-        nextIndex = GetWeightedIndex();
+        if (plan == null) return;
 
-        if (nextPiecePreview && tetrominosPreview != null && nextIndex < tetrominosPreview.Length)
+        Transform root = piece.transform.GetChild(0);
+
+        foreach (int i in plan)
+            if (i < root.childCount) MakeMetal(root.GetChild(i));
+    }
+
+    void MakeMetal(Transform b)
+    {
+        if (!b.TryGetComponent<MetallicBlock>(out _))
+            b.gameObject.AddComponent<MetallicBlock>();
+
+        if (b.TryGetComponent<SpriteRenderer>(out var sr))
+            sr.sprite = metalSprite;
+
+        if (metalAnimator != null)
         {
-            foreach (Transform child in nextPiecePreview)
-                Destroy(child.gameObject);
+            if (!b.TryGetComponent<Animator>(out var anim))
+                anim = b.gameObject.AddComponent<Animator>();
 
-            var preview = Instantiate(tetrominosPreview[nextIndex], nextPiecePreview);
-            preview.transform.localPosition = Vector3.zero;
-            preview.transform.localRotation = Quaternion.identity;
-            preview.transform.localScale = Vector3.one;
+            anim.runtimeAnimatorController = metalAnimator;
+            anim.enabled = true;
         }
     }
 
-    // Sorteio ponderado com uma regra: peça de runa só sai se houver metal no tabuleiro.
+    // A miniatura é a própria peça de jogo, sem lógica, encolhida e centralizada
+    void BuildPreview()
+    {
+        if (!nextPiecePreview) return;
+
+        foreach (Transform child in nextPiecePreview)
+            Destroy(child.gameObject);
+
+        var preview = Instantiate(tetrominosGameplay[nextIndex], nextPiecePreview);
+
+        // Desliga NA HORA: se deixar rodar um frame, ela tenta cair e entrar no grid
+        if (preview.TryGetComponent<Tetromino>(out var t)) t.enabled = false;
+
+        ApplyMetalPlan(preview, nextMetalPlan);
+
+        preview.transform.localPosition = Vector3.zero;
+        preview.transform.localRotation = Quaternion.identity;
+        preview.transform.localScale = Vector3.one * previewScale;
+
+        CenterPreview(preview.transform);
+    }
+
+    void CenterPreview(Transform preview)
+    {
+        var renderers = preview.GetComponentsInChildren<SpriteRenderer>();
+        if (renderers.Length == 0) return;
+
+        Bounds b = renderers[0].bounds;
+        for (int i = 1; i < renderers.Length; i++)
+            b.Encapsulate(renderers[i].bounds);
+
+        preview.position += nextPiecePreview.position - b.center;
+    }
+
+    // Sorteio ponderado, com a regra de runa só aparecer se houver metal
     int GetWeightedIndex()
     {
         bool allowRune = GridManager.HasAnyMetal();

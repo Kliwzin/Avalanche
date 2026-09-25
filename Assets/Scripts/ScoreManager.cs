@@ -4,7 +4,7 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     public static int score;
-    public TextMeshProUGUI scoreText;
+    public TMP_Text scoreText;
     public static int linesCleared;
 
     [Header("Design")]
