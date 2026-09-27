@@ -12,6 +12,18 @@ public class GridManager : MonoBehaviour
 
     public static Vector2 Round(Vector2 v) => new Vector2(Mathf.Round(v.x), Mathf.Round(v.y));
 
+    [Header("Regras")]
+    [Tooltip("Desligado: o bloco de aço fica flutuando onde travou")]
+    [SerializeField] bool metalFalls = true;
+
+    public static bool MetalFalls = true;
+
+    void Update()
+    {
+        //copia o valor do inspector todo frame, então dá pra mexer com o jogo rodando
+        MetalFalls = metalFalls;
+    }
+
     public static bool IsMetal(Transform t)
     {
         return t != null
@@ -134,10 +146,12 @@ public class GridManager : MonoBehaviour
         }
 
         for (int x = 0; x < width; x++)
+        {
             blocks[x].position = new Vector3(x, targets[x], 0f);
 
-        for (int x = 0; x < width; x++)
-            if (blocks[x].TryGetComponent<Animator>(out var anim)) anim.enabled = false;
+            if (blocks[x].TryGetComponent<AvalancheBlock>(out var ab))
+                ab.Land();
+        }
 
         isAnimating = false;
     }
@@ -180,7 +194,7 @@ public class GridManager : MonoBehaviour
                 {
                     Transform t = grid[x, y];
                     if (t == null) continue;
-                    if (IsMetal(t)) continue;
+                    if ( !MetalFalls && IsMetal(t)) continue;
 
                     if (grid[x, y - 1] == null)
                     {

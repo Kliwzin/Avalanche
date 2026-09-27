@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1729666044204045944}
   - component: {fileID: 2213923440974400943}
   - component: {fileID: 5994667141327404937}
+  - component: {fileID: 9183880999883401226}
   m_Layer: 0
   m_Name: SnowBlock
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 26.227695, y: 2.8778095, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -115,3 +116,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &9183880999883401226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706376280009856510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74019185da1f8174d8d937ea895a4723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AvalancheBlock
+  settledSprite: {fileID: -4922408086943569666, guid: 109bde8ee61cd834fb5535939bc04454, type: 3}

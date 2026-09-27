@@ -8,6 +8,12 @@ public class AvalancheManager : MonoBehaviour
     [Header("Bloco que cai na avalanche")]
     public GameObject avalancheBlockPrefab;
 
+    [Header("Animação da queda")]
+    [Tooltip("Tempo que cada bloco leva para cair")]
+    public float fallTime = 1.5f;
+    [Tooltip("Atraso entre uma coluna e a seguinte")]
+    public float stagger = 0.12f;
+
     [Header("Ritmo")]
     [Tooltip("Peças entre uma avalanche e a próxima, no começo")]
     public int startInterval = 20;
@@ -55,7 +61,7 @@ public class AvalancheManager : MonoBehaviour
             warningUI.SetActive(false);
         }
 
-        yield return GridManager.DropAvalancheRow(avalancheBlockPrefab);
+        yield return GridManager.DropAvalancheRow(avalancheBlockPrefab, fallTime, stagger);
         yield return GridManager.ResolveLinesAndFall(stepDelay);
     }
 }

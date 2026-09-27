@@ -354,7 +354,8 @@ MonoBehaviour:
   - 5
   - 5
   - 5
-  previewScale: 1
+  previewMaxSize: 3
+  previewMaxScale: 3
   metalSprite: {fileID: -3699666163275690941, guid: 419473ba6f78d744e89c39d113974112, type: 3}
   metalAnimator: {fileID: 9100000, guid: 2d60a1542aa89e44db4bb267e6b38fa0, type: 2}
   metalStartLines: 1
@@ -896,6 +897,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AvalancheManager
   avalancheBlockPrefab: {fileID: 7706376280009856510, guid: 5609e9d6ab855aa46b93e5e221f6e007, type: 3}
+  fallTime: 1.5
+  stagger: 0.12
   startInterval: 20
   minInterval: 8
   linesToSpeedUp: 10
@@ -1934,6 +1937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b95a99f42431549b172523c6da75f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridManager
+  metalFalls: 1
 --- !u!4 &1431821399
 Transform:
   m_ObjectHideFlags: 0

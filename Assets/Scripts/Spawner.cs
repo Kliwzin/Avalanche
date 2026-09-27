@@ -9,8 +9,10 @@ public class Spawner : MonoBehaviour
     [Min(0f)] public float[] weights;
 
     [Header("Preview")]
-    [Tooltip("Tamanho da miniatura em relação à peça no jogo")]
-    public float previewScale = 0.6f;
+    [Tooltip("Maior dimensão da miniatura, em células")]
+    public float previewMaxSize = 3f;
+    [Tooltip("Limite de aumento: 1 = nunca maior que no jogo")]
+    public float previewMaxScale = 1f;
 
     [Header("Metal parcial")]
     public Sprite metalSprite;
@@ -164,7 +166,7 @@ public class Spawner : MonoBehaviour
 
         preview.transform.localPosition = Vector3.zero;
         preview.transform.localRotation = Quaternion.identity;
-        preview.transform.localScale = Vector3.one * previewScale;
+        FitPreview(preview.transform);
 
         CenterPreview(preview.transform);
     }
@@ -175,6 +177,33 @@ public class Spawner : MonoBehaviour
         if (renderers.Length == 0) return;
 
         Bounds b = renderers[0].bounds;
+        for (int i = 1; i < renderers.Length; i++)
+            b.Encapsulate(renderers[i].bounds);
+
+        preview.position += nextPiecePreview.position - b.center;
+    }
+
+    // Escala a miniatura para caber na caixa e depois centraliza
+    void FitPreview(Transform preview)
+    {
+        var renderers = preview.GetComponentsInChildren<SpriteRenderer>();
+        if (renderers.Length == 0) return;
+
+        // mede a peça no tamanho original
+        preview.localScale = Vector3.one;
+
+        Bounds b = renderers[0].bounds;
+        for (int i = 1; i < renderers.Length; i++)
+            b.Encapsulate(renderers[i].bounds);
+
+        float largest = Mathf.Max(b.size.x, b.size.y);
+        float scale = largest > 0f ? previewMaxSize / largest : 1f;
+        scale = Mathf.Min(scale, previewMaxScale);
+
+        preview.localScale = Vector3.one * scale;
+
+        // mede de novo, já escalada, e centraliza
+        b = renderers[0].bounds;
         for (int i = 1; i < renderers.Length; i++)
             b.Encapsulate(renderers[i].bounds);
 
