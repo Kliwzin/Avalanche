@@ -13,27 +13,41 @@ public class Spawner : MonoBehaviour
     public float previewMaxSize = 3f;
     [Tooltip("Limite de aumento: 1 = nunca maior que no jogo")]
     public float previewMaxScale = 1f;
+    [Tooltip("Quanto da caixa a miniatura ocupa (0.7 = 70%, deixando margem)")]
+    [Range(0.1f, 1f)] public float previewFill = 0.7f;
+
+    [Header("Hold")]
+    [Tooltip("Caixa onde a peça guardada aparece (opcional)")]
+    public Transform holdPreview;
+    [Tooltip("Treme quando o jogador tenta guardar duas vezes na mesma peça")]
+    public UIPunch holdRefusedPunch;
 
     [Header("Metal parcial")]
     public Sprite metalSprite;
     public RuntimeAnimatorController metalAnimator;
-    public int metalStartLines = 5;
-    public int linesPerExtraMetal = 15;
+    public int metalStartLines = 3;
+    public int linesPerExtraMetal = 8;
     public int metalMaxPerPiece = 3;
-    [Range(0f, 1f)] public float metalChance = 0.35f;
+    [Range(0f, 1f)] public float metalChance = 0.45f;
 
     [Header("Peça inteira de metal")]
-    public int fullMetalStartLines = 60;
+    public int fullMetalStartLines = 30;
     [Range(0f, 1f)] public float fullMetalChance = 0.05f;
 
     [Header("Runas")]
-    [Tooltip("Multiplicador do peso das runas quando TODAS as colunas têm metal")]
+    [Tooltip("Multiplicador do peso das runas quando a pressão está no máximo")]
     public float runeMaxBoost = 3f;
-    [Tooltip("Com quantas colunas de metal o boost das runas chega ao máximo")]
+    [Tooltip("Com quantas colunas de metal o boost chega ao máximo")]
     public int runeBoostFullAt = 4;
 
     int nextIndex;
     int[] nextMetalPlan;
+
+    int holdIndex = -1;
+    int[] holdPlan;
+    bool holdUsedThisPiece;
+
+    Tetromino currentPiece;
 
     bool[] isRunePiece;
     bool[] isMetalPiece;
@@ -54,38 +68,91 @@ public class Spawner : MonoBehaviour
             isMetalPiece[i] = tetrominosGameplay[i].GetComponentInChildren<MetallicBlock>(true) != null;
         }
 
+        holdIndex = -1;
+        holdPlan = null;
+        BuildMiniature(holdPreview, -1, null);
+
         PickNext();
         Spawn();
     }
 
     public void Spawn()
     {
-        // O metal sumiu desde o sorteio: troca a runa por outra peça
-        if (isRunePiece[nextIndex] && !GridManager.HasAnyMetal())
-            PickNext();
+        SpawnPiece(nextIndex, nextMetalPlan);
+        PickNext();
+    }
 
-        var piece = Instantiate(tetrominosGameplay[nextIndex], transform.position, Quaternion.identity);
+    void SpawnPiece(int index, int[] plan)
+    {
+        var piece = Instantiate(tetrominosGameplay[index], transform.position, Quaternion.identity);
 
-        ApplyMetalPlan(piece, nextMetalPlan);
+        ApplyMetalPlan(piece, plan);
 
         var t = piece.GetComponent<Tetromino>();
         if (t != null)
         {
+            t.pieceIndex = index;
+            t.metalPlan = plan;
             t.Init(this);
-            if (!t.ValidMove()) GameManager.Instance.GameOver();
+
+            currentPiece = t;
+
+            if (!t.ValidMove() && GameManager.Instance != null)
+                GameManager.Instance.GameOver();
         }
 
-        PickNext();
+        holdUsedThisPiece = false;
+    }
+
+    public bool TryHold()
+    {
+        if(holdUsedThisPiece)
+        {
+            if (holdRefusedPunch != null) holdRefusedPunch.Play();
+            return false;
+        }
+
+        if (currentPiece == null) return false;
+
+        int outIndex = currentPiece.pieceIndex;
+        int[] outPlan = currentPiece.metalPlan;
+
+        Destroy(currentPiece.gameObject);
+        currentPiece = null;
+
+        if (holdIndex < 0)
+        {
+            holdIndex = outIndex;
+            holdPlan = outPlan;
+
+            SpawnPiece(nextIndex, nextMetalPlan);
+            PickNext();
+        }
+        else
+        {
+            int inIndex = holdIndex;
+            int[] inPlan = holdPlan;
+
+            holdIndex = outIndex;
+            holdPlan = outPlan;
+
+            SpawnPiece(inIndex, inPlan);
+        }
+
+        holdUsedThisPiece = true;
+        BuildMiniature(holdPreview, holdIndex, holdPlan);
+
+        return true;
     }
 
     void PickNext()
     {
         nextIndex = GetWeightedIndex();
         nextMetalPlan = PlanMetal(nextIndex);
-        BuildPreview();
+
+        BuildMiniature(nextPiecePreview, nextIndex, nextMetalPlan);
     }
 
-    // Decide AGORA quais blocos serão de metal, para miniatura e peça combinarem
     int[] PlanMetal(int index)
     {
         if (metalSprite == null) return null;
@@ -101,7 +168,7 @@ public class Spawner : MonoBehaviour
 
         if (lines >= fullMetalStartLines && Random.value < fullMetalChance)
         {
-            count = total;                                   // peça inteira
+            count = total;
         }
         else
         {
@@ -155,28 +222,34 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    // A miniatura é a própria peça de jogo, sem lógica, encolhida e centralizada
-    void BuildPreview()
+    // Serve as duas caixas: a da próxima peça e a da reserva.
+    // index < 0 esvazia a caixa.
+    void BuildMiniature(Transform box, int index, int[] plan)
     {
-        if (!nextPiecePreview) return;
+        if (!box) return;
 
-        foreach (Transform child in nextPiecePreview)
-            Destroy(child.gameObject);
+        for (int i = box.childCount - 1; i >= 0; i--)
+        {
+            Transform velho = box.GetChild(i);
+            velho.SetParent(null);
+            Destroy(velho.gameObject);
+        }
 
-        var preview = Instantiate(tetrominosGameplay[nextIndex], nextPiecePreview);
+        if (index < 0) return;
 
-        // Desliga NA HORA: se deixar rodar um frame, ela tenta cair e entrar no grid
-        if (preview.TryGetComponent<Tetromino>(out var t)) t.enabled = false;
+        var mini = Instantiate(tetrominosGameplay[index], box);
 
-        ApplyMetalPlan(preview, nextMetalPlan);
+        if (mini.TryGetComponent<Tetromino>(out var t)) t.enabled = false;
 
-        preview.transform.localPosition = Vector3.zero;
-        preview.transform.localRotation = Quaternion.identity;
-        FitPreview(preview.transform);
+        ApplyMetalPlan(mini, plan);
+
+        mini.transform.localPosition = Vector3.zero;
+        mini.transform.localRotation = Quaternion.identity;
+
+        FitPreview(mini.transform, box);
     }
 
-    // Escala a miniatura para caber na caixa e depois centraliza
-    void FitPreview(Transform preview)
+    void FitPreview(Transform preview, Transform box)
     {
         var renderers = preview.GetComponentsInChildren<SpriteRenderer>();
         if (renderers.Length == 0) return;
@@ -188,18 +261,35 @@ public class Spawner : MonoBehaviour
         for (int i = 1; i < renderers.Length; i++)
             b.Encapsulate(renderers[i].bounds);
 
+        // Espaço disponível: tirado da própria arte da caixa.
+        // Assim, mexer no tamanho da caixa ajusta a miniatura sozinho.
+        var boxArt = box.GetComponentInParent<SpriteRenderer>();
+
+        float available = boxArt != null
+            ? Mathf.Min(boxArt.bounds.size.x, boxArt.bounds.size.y) * previewFill
+            : previewMaxSize;
+
         float largest = Mathf.Max(b.size.x, b.size.y);
-        float scale = largest > 0f ? previewMaxSize / largest : 1f;
+        float scale = largest > 0f ? available / largest : 1f;
         scale = Mathf.Min(scale, previewMaxScale);
 
         preview.localScale = Vector3.one * scale;
 
-        // mede de novo, já escalada, e centraliza
         b = renderers[0].bounds;
         for (int i = 1; i < renderers.Length; i++)
             b.Encapsulate(renderers[i].bounds);
 
-        preview.position += nextPiecePreview.position - b.center;
+        Vector3 delta = box.position - b.center;
+        preview.position += new Vector3(delta.x, delta.y, 0f);
+
+        if (boxArt != null)
+        {
+            foreach (var r in renderers)
+            {
+                r.sortingLayerID = boxArt.sortingLayerID;
+                r.sortingOrder = boxArt.sortingOrder + 1;
+            }
+        }
     }
 
     float WeightOf(int i, bool useWeights, float runeBoost)

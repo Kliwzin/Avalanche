@@ -19,9 +19,13 @@ public class GridManager : MonoBehaviour
 
     public static bool MetalFalls = true;
 
-    void Update()
+    void Awake()
     {
-        //copia o valor do inspector todo frame, então dá pra mexer com o jogo rodando
+        MetalFalls = metalFalls;
+    }
+
+    void OnValidate()
+    {
         MetalFalls = metalFalls;
     }
 

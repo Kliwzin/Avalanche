@@ -40,11 +40,15 @@ public class AvalancheManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        piecesSinceLast = 0;
-        RollNextInterval();
 
         if (warningUI != null) warningUI.SetActive(false);
         if (runeWarningUI != null) runeWarningUI.SetActive(false);
+    }
+
+    void Start()
+    {
+        piecesSinceLast = 0;
+        RollNextInterval();
     }
 
     int BaseInterval

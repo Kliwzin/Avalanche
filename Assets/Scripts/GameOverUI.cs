@@ -19,8 +19,16 @@ public class GameOverUI : MonoBehaviour
         if (nameInput != null)
         {
             nameInput.text = "";
+            nameInput.onSubmit.RemoveListener(AoApertarEnter);
+            nameInput.onSubmit.AddListener(AoApertarEnter);
+
             nameInput.ActivateInputField();
         }
+    }
+
+    void AoApertarEnter(string _)
+    {
+        SaveScoreButton();
     }
 
     public void SaveScoreButton()

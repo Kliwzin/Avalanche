@@ -28,6 +28,12 @@ public class Tetromino : MonoBehaviour
     [Tooltip("Intervalo entre repetições depois que começou")]
     [SerializeField] float dasRepeat = 0.05f;
 
+    [Header("Guardar peça (Hold)")]
+    [SerializeField] KeyCode holdKey = KeyCode.C;
+
+    [HideInInspector] public int pieceIndex = -1;
+    [HideInInspector] public int[] metalPlan;
+
     // Deslocamentos testados na rotação, em ordem de preferência.
     static readonly Vector3[] kicks =
     {
@@ -60,6 +66,15 @@ public class Tetromino : MonoBehaviour
         if (Time.timeScale == 0) return;
         if (GridManager.isAnimating) return;
         if (hardDropping) return;
+
+        if (Input.GetKeyDown(holdKey))
+        {
+            if (spawner.TryHold())
+            {
+                enabled = false;
+                return;
+            }
+        }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -96,14 +111,12 @@ public class Tetromino : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow)) dir -= 1;
         if (Input.GetKey(KeyCode.RightArrow)) dir += 1;
 
-        // Nenhuma tecla, ou as duas ao mesmo tempo: não anda
         if (dir == 0)
         {
             lastDirection = 0;
             return;
         }
 
-        // Primeiro toque nessa direção: move na hora e arma a espera
         if (dir != lastDirection)
         {
             lastDirection = dir;
@@ -112,7 +125,6 @@ public class Tetromino : MonoBehaviour
             return;
         }
 
-        // Tecla continua segurada: repete depois da espera
         horizontalTimer -= Time.deltaTime;
 
         if (horizontalTimer <= 0f)

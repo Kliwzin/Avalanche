@@ -36,7 +36,6 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-
     //lines = quantas linhas sumiram
     //chain = elo da cascata
 
