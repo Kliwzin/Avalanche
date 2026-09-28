@@ -7,8 +7,14 @@ public class Tetromino : MonoBehaviour
     [SerializeField] float startFallTime = 1f;
     [SerializeField] float minFallTime = 0.2f;
 
+    [Header("Rotação")]
+    [Tooltip("Desligado: a peça não gira (runa, bloco único, peça O)")]
+    [SerializeField] bool canRotate = true;
+    [Tooltip("Blocos mantêm a orientação ao girar a peça: o brilho e a sombra ficam todos na mesma direção")]
+    [SerializeField] bool keepBlocksUpright = true;
+
     [Tooltip("Linhas limpas para chegar à velocidade máxima")]
-    [SerializeField] float linesToMaxSpeed = 40f;
+    [SerializeField] float linesToMaxSpeed = 30f;
 
     [Header("Hard Drop")]
     [SerializeField] float hardDropStepDelay = 0.02f;
@@ -64,7 +70,7 @@ public class Tetromino : MonoBehaviour
 
         HandleHorizontal();
 
-        if (Input.GetKeyDown(KeyCode.UpArrow)) TryRotate();
+        if (canRotate && Input.GetKeyDown(KeyCode.UpArrow)) TryRotate();
 
         float fall = GetCurrentFallTime();
         float currentFall = Input.GetKey(KeyCode.DownArrow) ? fall / 10f : fall;
@@ -116,6 +122,16 @@ public class Tetromino : MonoBehaviour
         }
     }
 
+    void KeepBlocksUpright()
+    {
+        if (!keepBlocksUpright) return;
+
+        Transform root = transform.GetChild(0);
+
+        for (int i = 0; i < root.childCount; i++)
+            root.GetChild(i).rotation = Quaternion.identity;
+    }
+
     void TryRotate()
     {
         Vector3 original = transform.position;
@@ -125,12 +141,17 @@ public class Tetromino : MonoBehaviour
         foreach (Vector3 kick in kicks)
         {
             transform.position = original + kick;
-            if (ValidMove()) return;
+
+            if (ValidMove())
+            {
+                KeepBlocksUpright();
+                return;
+            }
         }
 
-        // Nenhum deslocamento serviu: desfaz a rotação
         transform.position = original;
         transform.Rotate(0, 0, -90);
+        KeepBlocksUpright();
     }
 
     void TryMove(Vector3 delta)

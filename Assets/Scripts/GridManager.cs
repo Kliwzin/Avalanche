@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
@@ -38,6 +39,26 @@ public class GridManager : MonoBehaviour
                 if (IsMetal(grid[x, y])) return true;
 
         return false;
+    }
+
+    public static bool ColumnHasMetal(int x)
+    {
+        if (x < 0 || x >= width) return false;
+
+        for (int y = 0; y < height; y++)
+            if (IsMetal(grid[x, y])) return true;
+
+        return false;
+    }
+
+    public static int MetalColumnCount()
+    {
+        int count = 0;
+
+        for (int x = 0; x < width; x++)
+            if (ColumnHasMetal(x)) count++;
+
+        return count;
     }
 
     public static void RemoveFromGrid(Transform t)
@@ -151,6 +172,76 @@ public class GridManager : MonoBehaviour
 
             if (blocks[x].TryGetComponent<AvalancheBlock>(out var ab))
                 ab.Land();
+        }
+
+        isAnimating = false;
+    }
+
+    public static IEnumerator DropRuneAvalanche(GameObject[] runeBlockPrefabs, float fallTime = 1.5f, float stagger = 0.12f)
+    {
+        if (runeBlockPrefabs == null || runeBlockPrefabs.Length == 0) yield break;
+
+        List<int> columns = new List<int>();
+        for (int x = 0; x < width; x++)
+            if (ColumnHasMetal(x)) columns.Add(x);
+
+        if (columns.Count == 0) yield break;
+
+        foreach (int x in columns)
+        {
+            if (TopOfColumn(x) + 1 >= height)
+            {
+                if (GameManager.Instance != null) GameManager.Instance.GameOver();
+                yield break;
+            }
+        }
+
+        isAnimating = true;
+
+        float startY = height + 1;
+        Transform[] blocks = new Transform[columns.Count];
+        int[] targets = new int[columns.Count];
+
+        for (int i = 0; i < columns.Count; i++)
+        {
+            int x = columns[i];
+            targets[i] = TopOfColumn(x) + 1;
+
+            var prefab = runeBlockPrefabs[Random.Range(0, runeBlockPrefabs.Length)];
+            var go = UnityEngine.Object.Instantiate(prefab, new Vector3(x, startY, 0f), Quaternion.identity);
+
+            blocks[i] = go.transform;
+            grid[x, targets[i]] = go.transform;
+        }
+
+        float total = fallTime + (columns.Count - 1) * stagger;
+        float t = 0f;
+
+        while (t < total)
+        {
+            t += Time.deltaTime;
+
+            for (int i = 0; i < columns.Count; i++)
+            {
+                float k = Mathf.Clamp01((t - i * stagger) / fallTime);
+                k *= k;
+
+                blocks[i].position = new Vector3(columns[i], Mathf.Lerp(startY, targets[i], k), 0f);
+            }
+
+            yield return null;
+        }
+
+        for (int i = 0; i < columns.Count; i++)
+            blocks[i].position = new Vector3(columns[i], targets[i], 0f);
+
+        // Ativa uma de cada vez: os feixes acendem em sequência
+        for (int i = 0; i < columns.Count; i++)
+        {
+            if (blocks[i] == null) continue;
+
+            if (blocks[i].TryGetComponent<RuneBlock>(out var rune))
+                yield return rune.Activate(columns[i]);
         }
 
         isAnimating = false;

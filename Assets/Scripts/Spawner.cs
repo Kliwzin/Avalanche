@@ -26,6 +26,12 @@ public class Spawner : MonoBehaviour
     public int fullMetalStartLines = 60;
     [Range(0f, 1f)] public float fullMetalChance = 0.05f;
 
+    [Header("Runas")]
+    [Tooltip("Multiplicador do peso das runas quando TODAS as colunas têm metal")]
+    public float runeMaxBoost = 3f;
+    [Tooltip("Com quantas colunas de metal o boost das runas chega ao máximo")]
+    public int runeBoostFullAt = 4;
+
     int nextIndex;
     int[] nextMetalPlan;
 
@@ -167,20 +173,6 @@ public class Spawner : MonoBehaviour
         preview.transform.localPosition = Vector3.zero;
         preview.transform.localRotation = Quaternion.identity;
         FitPreview(preview.transform);
-
-        CenterPreview(preview.transform);
-    }
-
-    void CenterPreview(Transform preview)
-    {
-        var renderers = preview.GetComponentsInChildren<SpriteRenderer>();
-        if (renderers.Length == 0) return;
-
-        Bounds b = renderers[0].bounds;
-        for (int i = 1; i < renderers.Length; i++)
-            b.Encapsulate(renderers[i].bounds);
-
-        preview.position += nextPiecePreview.position - b.center;
     }
 
     // Escala a miniatura para caber na caixa e depois centraliza
@@ -210,18 +202,28 @@ public class Spawner : MonoBehaviour
         preview.position += nextPiecePreview.position - b.center;
     }
 
-    // Sorteio ponderado, com a regra de runa só aparecer se houver metal
+    float WeightOf(int i, bool useWeights, float runeBoost)
+    {
+        float w = useWeights ? Mathf.Max(0f, weights[i]) : 1f;
+        return isRunePiece[i] ? w * runeBoost : w;
+    }
+
     int GetWeightedIndex()
     {
-        bool allowRune = GridManager.HasAnyMetal();
         int n = tetrominosGameplay.Length;
         bool useWeights = weights != null && weights.Length == n;
+
+        int metalColumns = GridManager.MetalColumnCount();
+        bool allowRune = metalColumns > 0;
+
+        float pressure = Mathf.Clamp01(metalColumns / (float)Mathf.Max(1, runeBoostFullAt));
+        float runeBoost = Mathf.Lerp(1f, runeMaxBoost, pressure);
 
         float total = 0f;
         for (int i = 0; i < n; i++)
         {
             if (isRunePiece[i] && !allowRune) continue;
-            total += useWeights ? Mathf.Max(0f, weights[i]) : 1f;
+            total += WeightOf(i, useWeights, runeBoost);
         }
 
         if (total <= 0f)
@@ -239,7 +241,7 @@ public class Spawner : MonoBehaviour
         {
             if (isRunePiece[i] && !allowRune) continue;
 
-            acc += useWeights ? Mathf.Max(0f, weights[i]) : 1f;
+            acc += WeightOf(i, useWeights, runeBoost);
             if (r <= acc) return i;
         }
 

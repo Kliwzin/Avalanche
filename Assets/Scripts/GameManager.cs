@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
 
         GridManager.ResetGrid();
+        ScoreManager.score = 0;
+        ScoreManager.linesCleared = 0;
 
         if (gameOverUI != null) gameOverUI.SetActive(false);
     }
